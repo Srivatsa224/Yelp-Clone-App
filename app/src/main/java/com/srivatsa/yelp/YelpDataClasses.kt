@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class YelpSearchResult(
     //mirroring the json objects from Json file of response body
     @SerializedName("total")val total:Int,
-    @SerializedName("business")val restaurants: List<YelpRestaurant>
+    @SerializedName("businesses")val restaurants: List<YelpRestaurant>
     )
 
 data class YelpRestaurant(
@@ -13,7 +13,7 @@ data class YelpRestaurant(
     val rating: Double,
     val price: String,
     @SerializedName("review_count") val numReviews:Int,
-    @SerializedName("distamce")val distanceInMeters: Double,
+    @SerializedName("distance")val distanceInMeters: Double,
     @SerializedName("ImageUrl") val imageUrl: String,
     val category: List<YelpCategory>,
     val location: YelpLocation)
