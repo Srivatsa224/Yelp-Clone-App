@@ -1,7 +1,9 @@
 package com.srivatsa.yelp
 
+import com.bumptech.glide.annotation.GlideModule
 import com.google.gson.annotations.SerializedName
 
+@GlideModule
 data class YelpSearchResult(
     //mirroring the json objects from Json file of response body
     @SerializedName("total")val total:Int,
@@ -14,7 +16,7 @@ data class YelpRestaurant(
     val price: String,
     @SerializedName("review_count") val numReviews:Int,
     @SerializedName("distance")val distanceInMeters: Double,
-    @SerializedName("ImageUrl") val imageUrl: String,
+    @SerializedName("image_url") val imageUrl: String,
     val categories: List<YelpCategory>,
     val location: YelpLocation)
 {

@@ -1,5 +1,6 @@
 package com.srivatsa.yelp
 
+import com.bumptech.glide.annotation.GlideModule
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header

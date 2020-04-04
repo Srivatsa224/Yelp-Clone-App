@@ -15,6 +15,7 @@ import com.bumptech.glide.module.AppGlideModule
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_restaurant.view.*
 
+@GlideModule
 class RestaurantsAdapter(val context: Context, val restaurants: List<YelpRestaurant>) :
     RecyclerView.Adapter<RestaurantsAdapter.ViewHolder>() {
 
@@ -39,9 +40,9 @@ class RestaurantsAdapter(val context: Context, val restaurants: List<YelpRestaur
             itemView.tvDistance.text=restaurant.displayDistance()
             itemView.tvPrice.text=restaurant.price
             Glide.with(context).load(restaurant.imageUrl)
-                //.apply(RequestOptions().transform(
-              //      CenterCrop(),RoundedCorners(20)
-               // ))
+                .apply(RequestOptions().transform(
+                    CenterCrop(),RoundedCorners(20)
+               ))
             .into(itemView.imageView)
 
         }
