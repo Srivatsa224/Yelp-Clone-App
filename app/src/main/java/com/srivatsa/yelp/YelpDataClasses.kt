@@ -15,7 +15,7 @@ data class YelpRestaurant(
     @SerializedName("review_count") val numReviews:Int,
     @SerializedName("distance")val distanceInMeters: Double,
     @SerializedName("ImageUrl") val imageUrl: String,
-    val category: List<YelpCategory>,
+    val categories: List<YelpCategory>,
     val location: YelpLocation)
 {
     //convert distance in meters
@@ -26,10 +26,10 @@ data class YelpRestaurant(
     }
 }
 
-data class YelpCategory(
-    val title:String
-)
+    data class YelpCategory(
+     val title:String
+    )
 
-data class YelpLocation(
-   @SerializedName("address1")val address:String
-)
+    data class YelpLocation(
+    @SerializedName("address1")val address:String
+    )
